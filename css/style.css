@@ -1,0 +1,352 @@
+
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic);
+
+/*
+|--------------------------------------------------------------------------
+| Body
+|--------------------------------------------------------------------------
+*/
+
+html, body {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	font-family: 'PT Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	color: #666;
+	background-color: #fff;
+}
+
+body, p {
+	line-height: 1.5;
+}
+
+tr, td {
+	line-height: 20px;	
+}
+
+/*
+|--------------------------------------------------------------------------
+| Type
+|--------------------------------------------------------------------------
+*/
+
+h1, h2, h3, h4, h5, h6 {color: #323433 !important; font-weight: 300; margin: 0; margin-top: 10px;}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: #323433 !important; text-decoration: none;}
+
+h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+color: #323433 !important;  Preferably not the same color as the normal header link color.  There is limited support for psuedo classes in email clients, this was added just for good measure. 
+}
+
+h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+color: #323433 !important; 
+}
+
+h2 {
+     font-size: 24px;
+}
+
+a {
+     color: #666;
+}
+
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Common
+|--------------------------------------------------------------------------
+*/
+
+img {
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: 0;
+}
+
+img.inline {
+	display: inline !important;
+}
+
+table.fluid {
+	width: 100%;
+}
+
+table.full {
+     width: 100%;
+}
+
+table.fluid-90 {
+	width: 90%;
+}
+
+td.half {
+	width: 50%;
+}
+
+td.gutter {
+	width: 30px;
+}
+
+td.gutter-10 {
+     width: 10px;
+}
+
+.container {
+	width: 660px;
+}
+
+.spacer {
+	height: 50px;
+}
+
+.spacer-taller {
+	height: 50px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Template
+|--------------------------------------------------------------------------
+*/
+
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Header
+|--------------------------------------------------------------------------
+*/
+
+
+
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Heading
+|--------------------------------------------------------------------------
+*/
+
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Intro
+|--------------------------------------------------------------------------
+*/
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Button
+|--------------------------------------------------------------------------
+*/
+
+.btn {
+	width: 140px;
+	height: 45px;
+	background-color: #111; 
+	text-align: center;
+	border-radius: 3px;
+	font-weight: 400;
+	color: #fff;
+	overflow: hidden;
+}
+
+.btn a {
+	display: block;
+	line-height: 45px;
+	color: #fff;
+	text-decoration: none;
+	border: 0;
+}
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Article Left
+|--------------------------------------------------------------------------
+*/
+
+.article-image-left {
+     width: 315px;
+}
+
+
+
+/*
+|--------------------------------------------------------------------------
+| CTA
+|--------------------------------------------------------------------------
+*/
+
+.cta-pink {
+     background-color: #f79fab;
+     -webkit-box-shadow: 5px 5px 0 rgba(247,159,171,0.2);
+     box-shadow: 5px 5px 0 rgba(247,159,171,0.2);
+}
+
+.cta-purple {
+     background-color: #c2a6c5;
+     -webkit-box-shadow: 5px 5px 0 rgba(194,166,197,0.2);
+     box-shadow: 5px 5px 0 rgba(194,166,197,0.2);
+}
+
+.cta-wrap {
+     border: solid 1px #fff;
+}
+
+.cta-text {
+     text-align: center;
+     font-size: 36px;
+     line-height: 42px;
+     text-transform: uppercase;
+     font-weight: bold;
+     color: #fff;
+     text-shadow: 3px 3px 0 #de7c8a;
+     letter-spacing: 2px;
+     margin-bottom: 10px;
+}
+
+.cta-text a, .cta-subtext a {
+     color: #fff;
+     text-decoration: none;
+}
+
+.cta-purple .cta-text {
+     text-shadow: 3px 3px 0 #9a789e;
+}
+
+.cta-subtext {
+     color: #fff;
+     text-align: center;
+     font-size: 18px;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Products
+|--------------------------------------------------------------------------
+*/
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Footer
+|--------------------------------------------------------------------------
+*/
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Unsubscribe
+|--------------------------------------------------------------------------
+*/
+
+.unsubscribe-wrap {
+	background-color: #121212;
+}
+
+.unsubscribe {
+	width: 660px;
+	font-size: 12px;
+	color: #888;
+}
+
+.unsubscribe a {
+	color: #888;
+	text-decoration: underline;
+	border: 0;
+}
+
+.unsub-logo {
+	width: 85px;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Responsive
+|--------------------------------------------------------------------------
+*/
+
+@media( max-width: 768px ) {
+
+	.hide, .fluid td.hide {
+		display: none !important;
+	}
+
+	.mimg {
+		width: 100% !important;
+		height: auto;
+	}
+
+	.container, .unsubscribe {
+		width: 90% !important;
+		margin: 0 auto;
+	}
+
+     .unsubscribe {
+          text-align: center;
+     }
+
+     .sendie {
+          margin: 20px auto 0 auto;
+     }
+	
+	.nav {
+		display: none;
+	}
+
+	.fluid td, .unsubscribe td {
+		display: block !important;
+		width: 100% !important;
+	}
+
+     .fluid td table.escape-fluid td {
+          display: table-cell !important;
+          width: auto !important;
+     }
+
+     .fluid td table.escape-fluid {
+          width: auto;
+     }
+
+     .m-fluid {
+          width: 100% !important;
+     }
+
+     .foot-col {
+          margin-bottom: 30px;
+     }
+
+     .webversion {
+          text-align: center;
+     }
+
+     .webversion td.web-links {
+          display: none !important;
+     }
+
+     .webversion-link {
+          display: block;
+          width: 100% !important;
+     }
+
+}
+

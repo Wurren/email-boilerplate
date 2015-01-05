@@ -1,0 +1,9 @@
+{
+	"devDependencies" : {
+		"gulp" : "*",
+		"gulp-nunjucks-render" : "*",
+		"gulp-livereload" : "*",
+		"gulp-plumber" : "*",
+		"gulp-webserver" : "*"
+	}
+}
