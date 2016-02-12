@@ -1,10 +1,9 @@
 var  gulp           = require('gulp'),
-     plumber 		= require('gulp-plumber'),
+     plumber        = require('gulp-plumber'),
      livereload     = require('gulp-livereload'),
      nunjucksRender = require('gulp-nunjucks-render'),
-     webserver 	= require('gulp-webserver');
+     webserver  = require('gulp-webserver');
 
-nunjucksRender.nunjucks.configure(['templates/','templates/partials/','css/']);
 
 /*
 |--------------------------------------------------------------------------
@@ -13,8 +12,8 @@ nunjucksRender.nunjucks.configure(['templates/','templates/partials/','css/']);
 */
 
 var onError = function (err) {  
-	console.log(err);
-	this.emit('end');
+    console.log(err);
+    this.emit('end');
 };
 
 
@@ -25,12 +24,14 @@ var onError = function (err) {
 */
 
 gulp.task('render', function () {
-	gulp.src('templates/index.html')
-	.pipe(plumber({
-		errorHandler: onError
-	}))
-	.pipe(nunjucksRender())
-	.pipe(gulp.dest('build'));
+    gulp.src('templates/index.html')
+    .pipe(plumber({
+        errorHandler: onError
+    }))
+    .pipe(nunjucksRender({
+        path: ['templates','css']
+    }))
+    .pipe(gulp.dest('build'));
 });
 
 
@@ -46,11 +47,11 @@ gulp.task('watch', function() {
 
 gulp.task('webserver', function() {
   gulp.src('build')
-	.pipe(webserver({
-		livereload: true,
-		directoryListing: false,
-		open: true
-	}));
+    .pipe(webserver({
+        livereload: true,
+        directoryListing: false,
+        open: true
+    }));
 });
 
 
