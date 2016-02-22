@@ -1,0 +1,67 @@
+
+<table class="container" cellpadding="0" cellspacing="0" border="0" align="center">
+    <tr>
+        <td class="gutter"></td>
+        <td>
+            
+            <table class="fluid" cellpadding="0" cellspacing="0" border="0" align="center">
+                <tr>
+                    <td>{% include 'header.liquid' %}</td>
+                </tr>
+                <tr>
+                    <td>{% include 'navigation.liquid' %}</td>
+                </tr>
+                <tr>
+                    <td class="content">
+
+                        <repeater>
+                            
+                            <layout label="1 Col Article">
+                                {{ Article.MakeColumns(1, '600px', true) }}
+                            </layout>
+
+                            <layout label="2 Col Article">
+                                {{ Article.MakeColumns(2, '285px', true) }}
+                            </layout>
+
+                            <layout label="3 Col Article">
+                                {{ Article.MakeColumns(3, '180px') }}
+                            </layout>
+
+                            <layout label="4 Col Article">
+                                {{ Article.MakeColumns(4, '124px') }}
+                            </layout>
+
+                            <layout label="Heading">
+                                {{ Components.Heading() }}
+                            </layout>
+
+                            <layout label="Article Left + Image">
+                                {{ Article.LeftRight(false, '285px', true) }}
+                            </layout>
+
+                            <layout label="Article Right + Image">
+                                {{ Article.LeftRight(true, '285px', false) }}
+                            </layout>
+
+                        </repeater>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>{% include 'footer.liquid' %}</td>
+                </tr>
+                <tr>
+                    <td class="spacer"></td>
+                </tr>
+                <tr>
+                    <td>{% include 'unsubscribe.liquid' %}</td>
+                </tr>
+            </table>
+
+        </td>
+        <td class="gutter"></td>
+    </tr>
+</table>
+
+

@@ -1,0 +1,91 @@
+{% import './button.liquid' as Button %}
+
+{% macro Column(count, imgwidth, button=false, spacerClass="spacer") %}
+    <table class="fluid" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td><img editable width="{{ imgwidth }}" class="mimg" label="Image"></td>
+        </tr>
+        <tr>
+            <td height="10px"></td>
+        </tr>
+        <tr>
+            <td><h{{ count }}><singleline label="Article Title">Article Title</singleline></h{{ count }}></td>
+        </tr>
+        <tr>
+            <td><multiline label="Article Body">Article Body</multiline></td>
+        </tr>
+        {% if button %}
+        <tr>
+            <td>
+                {{ Button.Primary() }}
+            </td>
+        </tr>
+        {% endif %}
+        <tr>
+            <td class="{{ spacerClass }}"></td>
+        </tr>
+    </table>
+{% endmacro %}
+
+
+{% macro MakeColumns(count, imgwidth, button=false, spacerClass="spacer") %}
+    <table class="fluid" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td>
+                <table class="fluid" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        {% for column in range(0, count) %}
+                            <td class="col col-{{ count }}">
+                                {{ Column(count, imgwidth, button, spaceClass) }}
+                                {% if loop.last != true %}
+                                <td class="gutter"></td>
+                                {% endif %}
+                            </td>
+                        {% endfor %}
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="{{ spacerClass }}"></td>
+        </tr>
+    </table>
+{% endmacro %}
+
+
+
+{% macro LeftRight(dir, imgwidth, button=false, heading="h2", spacerClass="spacer") %}
+<table class="fluid article" cellpadding="0" cellspacing="0" border="0">
+     <tr>
+          <td>
+               <table class="fluid" {{ 'dir="rtl"' | safe if dir  }} cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td class="col-2" width="{{ imgwidth }}" valign="top" {{ 'dir="ltr"' | safe if dir }}>
+                            <img editable label="Article Image" width="{{ imgwidth }}" class="mimg">
+                        </td>
+                        <td class="gutter" {{ 'dir="ltr"' | safe if dir }}></td>
+                        <td valign="top" {{ 'dir="ltr"' | safe if dir }}>
+                            <table class="fluid" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td><{{ heading }}><singleline label="Article Title">Article Title</singleline></{{ heading }}></td>
+                                </tr>
+                                <tr>
+                                    <td><multiline label="Article Body">Article Body</multiline></td>
+                                </tr>
+                                {% if button %}
+                                <tr>
+                                    <td>{{ Button.Primary() }}</td>
+                                </tr>
+                                {% endif %}
+                            </table>
+                         </td>
+                    </tr>
+               </table>
+          </td>
+     </tr>
+     <tr>
+          <td class="{{ spacerClass }}"></td>
+     </tr>
+</table>
+{% endmacro %}
+

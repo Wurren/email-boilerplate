@@ -1,0 +1,17 @@
+
+{% macro Heading(text="Heading Title Here", center=false) %}
+<table class="fluid" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td class="line">
+            <table class="fluid heading {{ 'heading-center' if center }}" cellpadding="0" cellspacing="0" border="0" align="center">
+                <tr>
+                    <td><h2><singleline label="Heading Title">{{ text }}</singleline></h2></td>
+                </tr>            
+           </table>
+        </td>
+    </tr>
+    <tr>
+        <td class="spacer">&nbsp;</td>
+    </tr>
+</table>
+{% endmacro %}
