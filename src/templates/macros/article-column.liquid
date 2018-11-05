@@ -37,10 +37,10 @@
                         {% for column in range(0, count) %}
                             <td class="col col-{{ count }}">
                                 {{ Column(count, imgwidth, button, spaceClass) }}
-                                {% if loop.last != true %}
-                                <td class="gutter"></td>
-                                {% endif %}
                             </td>
+                            {% if loop.last != true %}
+                                <td class="gutter"></td>
+                            {% endif %}
                         {% endfor %}
                     </tr>
                 </table>
